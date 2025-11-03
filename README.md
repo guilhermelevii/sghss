@@ -9,6 +9,7 @@ Fontes de estudo:
 🔗 Angular Material - Getting Started
 
 🚀 Iniciando o Projeto
+
 ng new castro
 
 🗂️ Estrutura do Projeto
@@ -17,16 +18,18 @@ src/	Contém todo o código-fonte da aplicação (componentes, serviços, módul
 src/app/	Diretório principal da aplicação onde ficam os componentes, serviços e módulos.
 src/assets/	Arquivos estáticos, como imagens e fontes.
 src/environments/	Arquivos de configuração para diferentes ambientes.
-main.ts	Arquivo principal que inicializa o módulo raiz.
-index.html	Página HTML principal onde o app Angular é carregado (injeta o <app-root>).
-styles.css	Estilos globais da aplicação.
-angular.json	Configurações da CLI (builds, estilos, budgets etc).
-package.json	Lista de dependências e scripts.
-package-lock.json	Versões exatas das dependências instaladas.
-tsconfig.json	Configurações gerais do TypeScript.
-tsconfig.app.json	Configurações específicas da aplicação.
-tsconfig.spec.json	Configurações para testes unitários.
+main.ts/	Arquivo principal que inicializa o módulo raiz.
+index.html/	Página HTML principal onde o app Angular é carregado (injeta o <app-root>).
+styles.css/	Estilos globais da aplicação.
+angular.json/	Configurações da CLI (builds, estilos, budgets etc).
+package.json/	Lista de dependências e scripts.
+package-lock.json/	Versões exatas das dependências instaladas.
+tsconfig.json/	Configurações gerais do TypeScript.
+tsconfig.app.json/	Configurações específicas da aplicação.
+tsconfig.spec.json/	Configurações para testes unitários.
+
 🔁 Clonando o Repositório (Git)
+
 cd caminho/desejado
 git clone <URL-do-repositório>
 
@@ -49,7 +52,6 @@ Se o comando ng não for reconhecido:
 
 npm list -g
 
-
 Copie o caminho exibido (ex: C:\Users\usuario\AppData\Roaming\npm)
 ➡ Vá em Variáveis de Ambiente → Editar variável Path → Adicione o caminho
 Reinicie o VSCode e teste novamente com ng version.
@@ -60,22 +62,21 @@ npm install
 
 ▶️ Iniciar o Servidor de Desenvolvimento
 npm run start
-# ou
+ou
 ng serve
-
 
 Opções úteis:
 
 ng serve --open        # Abre o navegador automaticamente
 ng serve --port 4201   # Define uma porta específica
 
-
 Acesse em: http://localhost:4200
 
 🛠️ Gerando Código com Angular CLI
+
 Criar novo componente
 ng generate component nome-do-componente
-# ou
+ou
 ng g c nome-do-componente
 
 Ver todos os comandos disponíveis
@@ -85,8 +86,15 @@ ng generate --help
 🏗️ Compilar para Produção
 ng build
 
-
 O build será gerado em: /dist
+
+⚙️ Build de Produção
+
+Para versões mais recentes da CLI (2.0+):
+
+ng build --configuration=production
+
+O resultado será gerado em /dist.
 
 ✅ Testes Unitários (Karma)
 ng test
@@ -209,14 +217,6 @@ MatCheckboxModule	Checkboxes estilizados.
 MatProgressSpinnerModule	Indicadores de loading.
 MatSnackBarModule	Notificações tipo toast.
 BrowserAnimationsModule	Necessário para animações.
-⚙️ Build de Produção
-
-Para versões mais recentes da CLI (2.0+):
-
-ng build --configuration=production
-
-
-O resultado será gerado em /dist.
 
 🧠 Observações Importantes
 
@@ -259,8 +259,6 @@ Usar MatSnackBar para mensagens de alerta e feedback ao usuário.
 🧹 Organizar / Format Code
 
 Windows/Linux: Shift + Alt + F
-
-Mac: Shift + Option + F
 
 Ativar formatação automática ao salvar:
 
