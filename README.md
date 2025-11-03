@@ -2,6 +2,7 @@
 
 Versão Angular CLI: 20.0.0
 Este guia organiza e padroniza instruções de instalação, uso e boas práticas para o projeto Angular.
+
 Fontes de estudo:
 🔗 KipperDev - Aprenda Angular do Zero
 
