@@ -1,3 +1,5 @@
+// o “GPS” do app — diz qual caminho leva a qual tela.
+
 import { Routes } from '@angular/router';
 import { LoginComponent } from './login/login';
 

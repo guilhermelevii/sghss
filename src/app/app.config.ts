@@ -26,3 +26,5 @@ export const appConfig: ApplicationConfig = {
 // provideRouter(routes) → Sistema de rotas
 
 // provideBrowserGlobalErrorListeners() → Opcional (pode remover)
+
+// “painel de configuração do app”.

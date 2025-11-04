@@ -7,3 +7,5 @@ bootstrapApplication(App, appConfig)
 
 
 // Arquivo de entrada principal que inicializa o módulo principal da aplicação
+
+// Motor de partida

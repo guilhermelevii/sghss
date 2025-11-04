@@ -13,3 +13,8 @@ import { RouterOutlet } from '@angular/router';
 export class App {
   protected readonly title = signal('sghss');
 }
+
+
+// É o componente raiz (principal) do aplicativo — o que controla toda a tela base.
+
+// “controlador principal” da interface.
