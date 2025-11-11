@@ -218,6 +218,14 @@ MatProgressSpinnerModule	Indicadores de loading.
 MatSnackBarModule	Notificações tipo toast.
 BrowserAnimationsModule	Necessário para animações.
 
+# Cores padrões do Angular Material
+
+primary → cor principal do tema (geralmente azul)
+
+accent → cor secundária (geralmente rosa/lilás)
+
+warn → cor de alerta (vermelho)
+
 🧠 Observações Importantes
 
 O Angular compila o TypeScript/HTML em tempo real no ng serve.

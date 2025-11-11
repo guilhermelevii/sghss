@@ -47,7 +47,8 @@
           [disabled]="!loginForm.valid || loading"
           (click)="clicou()"
         >
-          <mat-spinner diameter="20" *ngIf="loading"></mat-spinner>
+        <!-- loader / indicador de carregamento -->
+          <mat-spinner diameter="20" *ngIf="loading"></mat-spinner>  
           <span *ngIf="!loading">Entrar</span>
         </button>
       </form>
