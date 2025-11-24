@@ -13,6 +13,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { AuthService } from '../services/auth.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -44,7 +46,9 @@ export class LoginComponent {
 
   constructor(
     private fb: FormBuilder,
-    private snackBar: MatSnackBar // Para usar no método onSubmit
+    private snackBar: MatSnackBar, // Para usar no método onSubmit
+    private auth: AuthService, // AuthService injetado
+    private router:Router // Router injetado
   ) {
     this.loginForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
@@ -53,17 +57,30 @@ export class LoginComponent {
     });
   }
 
-  onSubmit() {
-    if (this.loginForm.valid) {
-      this.loading = true;
-      // Simula chamada API
-      setTimeout(() => {
-        this.loading = false;
-        this.snackBar.open('Login realizado com sucesso!', 'Fechar', {
-          duration: 3000
-        });
-      }, 2000);
+  async onSubmit() {
+    if (!this.loginForm.valid) return;
+
+    this.loading = true;
+    const { email, password } = this.loginForm.value;
+
+    try {
+      // 👇 LOGIN REAL DE VERDADE
+      await this.auth.login(email, password);
+
+      this.snackBar.open('Login realizado com sucesso!', 'Fechar', {
+        duration: 3000
+      });
+
+      // 👇 REDIRECIONA PARA O DASHBOARD
+      this.router.navigate(['/dashboard']);
+
+    } catch (err) {
+      this.snackBar.open('Usuário ou senha incorretos', 'Fechar', {
+        duration: 3000
+      });
     }
+
+    this.loading = false;
   }
 
   clicou() {
