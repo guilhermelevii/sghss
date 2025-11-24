@@ -1,1 +1,64 @@
-<p>dashboard works!</p>
+<mat-sidenav-container class="layout">
+
+  <!-- Sidebar -->
+  <mat-sidenav mode="side" opened class="sidebar">
+    <h2 class="logo">MeuApp</h2>
+
+    <mat-nav-list>
+      <a mat-list-item class="active">Dashboard</a>
+      <a mat-list-item>Usuários</a>
+      <a mat-list-item>Relatórios</a>
+      <a mat-list-item>Configurações</a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <!-- Conteúdo -->
+  <mat-sidenav-content>
+
+    <!-- Topbar -->
+    <mat-toolbar color="primary" class="topbar">
+      <span>Dashboard</span>
+
+      <span class="spacer"></span>
+
+      <div class="user-info">
+        <span class="username">Olá, Guilherme</span>
+
+        <img src="https://ui-avatars.com/api/?name=G+L" class="avatar" />
+      </div>
+    </mat-toolbar>
+
+    <!-- Cards -->
+    <div class="cards">
+      <mat-card class="card">
+        <mat-card-title>Total de Usuários</mat-card-title>
+        <mat-card-content>
+          <p class="value">1.248</p>
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card class="card">
+        <mat-card-title>Vendas Hoje</mat-card-title>
+        <mat-card-content>
+          <p class="value">R$ 2.950</p>
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card class="card">
+        <mat-card-title>Acessos</mat-card-title>
+        <mat-card-content>
+          <p class="value">5.439</p>
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card class="card">
+        <mat-card-title>Suporte Abertos</mat-card-title>
+        <mat-card-content>
+          <p class="value">18</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+  </mat-sidenav-content>
+
+</mat-sidenav-container>
