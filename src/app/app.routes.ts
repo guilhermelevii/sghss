@@ -3,13 +3,18 @@
 import { Routes } from '@angular/router';
 import { LoginComponent } from './login/login';
 import { DashboardComponent } from './dashboard/dashboard';
+import { AuthGuard } from './guards/auth.guard';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'login', pathMatch: 'full' }, //  redireciona pra login
-    { path: 'login', component: LoginComponent },
-    {path: 'dashboard', component: DashboardComponent}
+    { path: 'login', component: LoginComponent }, 
+    {path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] } // pode adicionar guards aqui
     
 ];
+
+
+
+// Rotas → define navegação entre páginas
 
 // Criando as rotas e exportando
 

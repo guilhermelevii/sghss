@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { of } from 'rxjs';
 import { Patient } from '../models/pacient.model.ts';
 
+// Torna o serviço singleton para todo o app — padrão moderno do Angular.
 @Injectable({ providedIn: 'root' })
 export class PatientService {
   private patients: Patient[] = [
@@ -9,8 +10,11 @@ export class PatientService {
     { id: '2', name: 'Maria Souza', cpf: '11111111111', birthdate: '1990-05-10', phone: '98888-1111' }
   ];
 
+//  ✔️ Funciona exatamente como uma requisição GET real do HttpClient retornando um Observable.  
+// ✔️ Perfeito para usar no dashboard. 
+
   list() { return of(this.patients); }
-  get(id: string) { return of(this.patients.find(p => p.id === id)); }
+  get(id: string) { return of(this.patients.find(p => p.id === id)); }  
   create(p: Omit<Patient, 'id'>) {
     const newP: Patient = { id: String(Date.now()), ...p };
     this.patients.push(newP);
@@ -26,3 +30,8 @@ export class PatientService {
     return of(true);
   }
 }
+
+
+// .find() retorna: o paciente ou undefined
+// create(): Omit<Patient, 'id'> → cria um paciente sem id (id é gerado internamente)
+// update(): Partial<Patient> → atualiza apenas os campos fornecidos    

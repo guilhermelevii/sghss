@@ -275,3 +275,54 @@ Vá em Configurações → Format On Save e marque ✅
 📖 Licença
 
 Este projeto é licenciado sob os termos da MIT License.
+
+
+Pastas de sistema.
+
+✔️ .angular
+
+Configurações internas do Angular CLI.
+Você não mexe.
+
+✔️ .vscode
+
+Configurações do editor (plugins, formatadores, etc.).
+
+✔️ node_modules
+
+Bibliotecas instaladas.
+Você não mexe, só instala via npm.
+
+✔️ public
+
+Arquivos estáticos, logos, PDFs, imagens, etc.
+
+
+
+
+Pense em camadas
+Interface (HTML/CSS)
+
+↓
+Componentes (TS)
+↓
+Serviços
+↓
+Modelos
+↓
+Backend
+
+
+-Serviços são sua “ponte” com a API
+
+Nada de buscar dados no componente.
+Componente só chama métodos do service.
+
+-Guards protegem rotas
+
+Evita que usuário não logado entre em páginas restritas.
+
+-As rotas definem a navegação
+
+Quer abrir um componente?
+Ele precisa estar nas rotas.
