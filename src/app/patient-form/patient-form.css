@@ -1,0 +1,9 @@
+mat-card { margin: 16px; }
+.form { padding: 16px; }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+}
+.full { grid-column: 1 / -1; }
+.actions { margin-top: 16px; display: flex; gap: 12px; }

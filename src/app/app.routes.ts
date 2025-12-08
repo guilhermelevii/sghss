@@ -4,12 +4,15 @@ import { Routes } from '@angular/router';
 import { LoginComponent } from './login/login';
 import { DashboardComponent } from './dashboard/dashboard';
 import { AuthGuard } from './guards/auth.guard';
+import { PatientListComponent } from './patient-list/patient-list';
+import { PatientFormComponent } from './patient-form/patient-form';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'login', pathMatch: 'full' }, //  redireciona pra login
     { path: 'login', component: LoginComponent }, 
-    {path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] } // pode adicionar guards aqui
-    
+    {path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] }, // pode adicionar guards aqui
+    {path: 'patients',component: PatientListComponent, canActivate: [AuthGuard] },
+    {path: 'patientsForm', component: PatientFormComponent, canActivate: [AuthGuard] }
 ];
 
 
