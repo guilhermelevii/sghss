@@ -1,0 +1,29 @@
+<div class="container">
+  <mat-card class="card">
+
+    <h2>Cadastrar Paciente</h2>
+
+    <form [formGroup]="form" (ngSubmit)="salvar()">
+
+      <mat-form-field appearance="outline" class="full">
+        <mat-label>Nome</mat-label>
+        <input matInput formControlName="nome">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full">
+        <mat-label>CPF</mat-label>
+        <input matInput formControlName="cpf">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full">
+        <mat-label>Telefone</mat-label>
+        <input matInput formControlName="telefone">
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" class="full" [disabled]="form.invalid">
+        Salvar
+      </button>
+
+    </form>
+  </mat-card>
+</div>

@@ -1,20 +1,25 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { MatIcon } from "@angular/material/icon";
-import { MatToolbar } from "@angular/material/toolbar";
 
+// Angular Material
+import { MatIconModule } from '@angular/material/icon';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @Component({
   selector: 'app-root',
-  standalone:true,
-  imports: [RouterOutlet, MatIcon, MatToolbar],
+  standalone: true,
+  imports: [
+    RouterOutlet,
+    MatIconModule,
+    MatToolbarModule
+  ],
   templateUrl: './app.html',
-  styleUrl: './app.css',
-
+  styleUrls: ['./app.css']
 })
-export class App {
-  protected readonly title = signal('sghss');
+export class AppComponent {
+  title = signal('SGHSS');
 }
+
 
 
 // É o componente raiz (principal) do aplicativo — o que controla toda a tela base.

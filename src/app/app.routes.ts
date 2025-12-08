@@ -1,18 +1,27 @@
 // o “GPS” do app — diz qual caminho leva a qual tela.
 
 import { Routes } from '@angular/router';
-import { LoginComponent } from './login/login';
-import { DashboardComponent } from './dashboard/dashboard';
-import { AuthGuard } from './guards/auth.guard';
-import { PatientListComponent } from './patient-list/patient-list';
-import { PatientFormComponent } from './patient-form/patient-form';
+import { LoginComponent } from './pages/login/login';
+import { DashboardComponent } from './pages/dashboard/dashboard';
+import { CadastrarPacienteComponent } from './pages/cadastrar-paciente/cadastrar-paciente';
+import { ListaPacientesComponent } from './pages/lista-pacientes/lista-pacientes';
 
 export const routes: Routes = [
-    { path: '', redirectTo: 'login', pathMatch: 'full' }, //  redireciona pra login
-    { path: 'login', component: LoginComponent }, 
-    {path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] }, // pode adicionar guards aqui
-    {path: 'patients',component: PatientListComponent, canActivate: [AuthGuard] },
-    {path: 'patientsForm', component: PatientFormComponent, canActivate: [AuthGuard] }
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+
+  // Tela de Login
+  { path: 'login', component: LoginComponent },
+
+  // Dashboard
+  { path: 'dashboard', component: DashboardComponent },
+
+  // Cadastro de Paciente
+  { path: 'cadastrar-paciente', component: CadastrarPacienteComponent },
+
+  { path: 'lista-pacientes', component: ListaPacientesComponent },
+
+  // Rota coringa para qualquer URL inexistente
+  { path: '**', redirectTo: 'login' }
 ];
 
 

@@ -1,0 +1,22 @@
+h1 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.cards {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  width: 250px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}

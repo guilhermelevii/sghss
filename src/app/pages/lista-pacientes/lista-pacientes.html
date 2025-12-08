@@ -1,0 +1,9 @@
+<h1>Pacientes Cadastrados</h1>
+
+<div class="list">
+  <mat-card class="card" *ngFor="let p of pacientes">
+    <h3>{{ p.nome }}</h3>
+    <p><strong>CPF:</strong> {{ p.cpf }}</p>
+    <p><strong>Telefone:</strong> {{ p.telefone }}</p>
+  </mat-card>
+</div>
