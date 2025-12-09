@@ -1,3 +1,5 @@
+// GUILHERME HENRIQUE LEVI DOMINGOS COSTA RU: 4628902
+
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 

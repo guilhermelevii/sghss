@@ -1,3 +1,5 @@
+// GUILHERME HENRIQUE LEVI DOMINGOS COSTA RU: 4628902
+
 import { bootstrapApplication } from '@angular/platform-browser';
 import { appConfig } from './app/app.config';
 import { AppComponent } from './app/app';
